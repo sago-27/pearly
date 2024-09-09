@@ -1,0 +1,203 @@
+/* Global Styles */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: #010101;
+    color: #050505;
+}
+
+nav ul li a:hover,
+nav ul li .dropbtn:hover {
+    color: #ffd700;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #f5f5dc; /* Beige background color */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background-color: #9f8ded;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.hero-content img {
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-content img:hover {
+    transform: scale(1.1);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.footer-info {
+    max-width: 800px; /* Maximum width for the content */
+    margin: 0 auto; /* Center the footer content horizontally */
+}
+
+.contact-info {
+    margin-top: 10px; /* Space above the contact information */
+}
+
+.contact-info p {
+    margin: 5px 0; /* Space between contact details */
+}
+
+.contact-info a {
+    color: #ffcc00; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Menu Page Specific Styles */
+body.menu-page {
+    background-color: #0a0a0a;
+}
+
+/* Header Styles for Menu Page */
+body.menu-page header {
+    background-color: #6f4e37;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+body.menu-page .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+body.menu-page nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+body.menu-page nav ul li {
+    margin-left: 20px;
+}
+
+body.menu-page nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+body.menu-page nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Menu Highlights Styles */
+body.menu-page .menu-highlights {
+    padding: 20px;
+    text-align: center;
+}
+
+body.menu-page .menu-highlights h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+body.menu-page .menu-item {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+body.menu-page .menu-item:hover {
+    transform: scale(1.05);
+}
+
+body.menu-page .menu-item img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+}
+
+body.menu-page .menu-item h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+body.menu-page .menu-item p {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+    padding: 0%;
+}
+/* Add this to your index.css */
+
+.page-transition {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.page-transition-enter {
+    opacity: 0;
+}
+
+.page-transition-enter-active {
+    opacity: 1;
+}
+
+.page-transition-exit {
+    opacity: 1;
+}
+
+.page-transition-exit-active {
+    opacity: 0;
+}

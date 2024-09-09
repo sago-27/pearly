@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Brews & Bites Coffee Emporium </title>
+    <link rel="stylesheet" href="business.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Ensure all text in the product details is black */
+        .product-details h2,
+        .product-details p {
+            color: black;
+        }
+        /* Make the "Our Coffee Selection" header black */
+        .menu-section h1 {
+            color: black;
+        }
+
+        /* Make the "Hot Drinks" header black */
+        .hot-coffees h2 {
+            color: black;
+        }
+
+        /* Make the "Cold Drinks" header black */
+        .cold-coffees h2 {
+            color: black;
+        }
+
+        /* Make the "Hot Pastries" header black and center-align it */
+        .hot-pastries h2 {
+            color: black;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* Initial state of the product items */
+        .product-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+        }
+        /* Hover effect for product items */
+        .product-item:hover {
+            transform: scale(1.05); /* Slightly enlarge the frame */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for a 3D effect */
+        }
+        /* Ensure the layout accommodates additional products */
+        .business-products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the products horizontally */
+            gap: 20px; /* Increased space between items */
+        }
+        /* Style for Buy button */
+        .buy-button {
+            background-color: #bb7953; /* Orange background for the button */
+            color: white; /* White text color */
+            border: none; /* Remove default border */
+            padding: 10px 20px; /* Add padding */
+            text-align: center; /* Center text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make it an inline-block element */
+            font-size: 16px; /* Font size */
+            margin-top: 10px; /* Space above the button */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+        .buy-button:hover {
+            background-color: #a98cbb; /* Darker orange on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Brews & Bites 
+            <p>Coffee Emporium</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="company.html" class="dropbtn">Company</a>
+                    <div class="dropdown-content">
+                      <a href="business.html">Business</a>  
+                        <a href="menu.html">Menu</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="um.html">The University Of Manila</a></li>
+                <li><a href="cs.html">Computer Science</a></li>
+                <li><a href="os.html">OS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="menu-section">
+        <h1>Our Coffee Selection</h1>
+        
+        <div class="hot-coffees">
+            <h2>Hot Drinks</h2>
+            <div class="business-products">
+                <!-- Existing hot coffees -->
+                <div class="product-item">
+                    <img src="coffee.jpg" alt="Espresso">
+                    <div class="product-details">
+                        <h2>Espresso</h2>
+                        <p>A rich, bold espresso shot with a creamy crema. <span class="price">₱190.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="cappuccino.jpg" alt="Cappuccino">
+                    <div class="product-details">
+                        <h2>Cappuccino</h2>
+                        <p>A classic cappuccino with frothy milk and a shot of espresso. <span class="price">₱215.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="latte.jpg" alt="Latte">
+                    <div class="product-details">
+                        <h2>Latte</h2>
+                        <p>Smooth and creamy latte with a hint of vanilla. <span class="price">₱115.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="Caramel Macchiato.jpg" alt="Macchiato">
+                    <div class="product-details">
+                        <h2>Macchiato</h2>
+                        <p>A strong espresso topped with a touch of frothy milk. <span class="price">₱170.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="mocha.jpg" alt="Mocha">
+                    <div class="product-details">
+                        <h2>Mocha</h2>
+                        <p>Rich chocolate mixed with espresso and steamed milk. <span class="price">₱210.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="americano.jpg" alt="Americano">
+                    <div class="product-details">
+                        <h2>Americano</h2>
+                        <p>Bold espresso diluted with hot water for a rich taste. <span class="price">₱120.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+                <!-- New hot coffee -->
+                <div class="product-item">
+                    <img src="hot.jpg" alt="Hot Chocolate">
+                    <div class="product-details">
+                        <h2>Hot Chocolate</h2>
+                        <p>Rich and creamy hot chocolate with whipped cream. <span class="price">₱160.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cold-coffees">
+            <h2>Cold Drinks</h2>
+            <div class="business-products">
+                <!-- Existing cold coffees -->
+                <div class="product-item">
+                    <img src="icedlatte.jpg" alt="Iced Latte">
+                    <div class="product-details">
+                        <h2>Iced Latte</h2>
+                        <p>Cool and creamy iced latte with a touch of sweetness. <span class="price">₱225.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="cold brew.jpg" alt="Cold Brew">
+                    <div class="product-details">
+                        <h2>Cold Brew</h2>
+                        <p>Refreshing cold brew coffee with smooth flavor. <span class="price">₱150.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="affogato.jpg" alt="Affogato">
+                    <div class="product-details">
+                        <h2>Affogato</h2>
+                        <p>Delicious vanilla ice cream drowned with a shot of hot espresso. <span class="price">₱200.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="l.jpg" alt="Nitro Cold Brew">
+                    <div class="product-details">
+                        <h2>Iced Chai Latte</h2>
+                        <p>A cold blend of spiced chai tea and milk, often served with ice and sometimes topped with whipped cream. <span class="price">₱230.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="d.jpg" alt="Iced Coffee">
+                    <div class="product-details">
+                        <h2>Iced Dark Choco</h2>
+                        <p>A chilled beverage made with dark chocolate, milk, and ice. <span class="price">₱225.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+                <!-- New cold coffee -->
+                <div class="product-item">
+                    <img src="h.jpg" alt="Cold Brew Shake">
+                    <div class="product-details">
+                        <h2>Iced Herbal Tea</h2>
+                        <p>Caffeine-free tea varieties like chamomile or peppermint served cold with ice. <span class="price">₱150.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+                <!-- Additional new cold coffee -->
+                <div class="product-item">
+                    <img src="q.jpg" alt="Mocha Frappe">
+                    <div class="product-details">
+                        <h2>Iced Fruit Punch</h2>
+                        <p>A chilled beverage made with a mix of fruit juices and sometimes chunks of fresh fruit. <span class="price">₱130.00</span></p>
+                        <button class="buy-button">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+              
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Follow us on social media!</p>
+        <p>© 2024 Brews & Bites Coffee Emporium. All rights reserved.</p>
+    </footer>
+</body>
+</html>

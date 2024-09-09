@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business - Coffee Haven</title>
+    <link rel="stylesheet" href="company.css">
+      <link rel="stylesheet" href="styles.css">
+    <style>
+        .article-content {
+            margin-bottom: 40px; /* Adds space below each section */
+            padding: 20px; /* Adds space inside each section */
+            border: 1px solid #ddd; /* Optional: Adds a border for visual separation */
+            border-radius: 5px; /* Optional: Rounds the corners of the border */
+        }
+
+        .article-details p {
+            margin: 20px 0; /* Adds space above and below paragraphs */
+            line-height: 1.6; /* Improves readability by increasing line height */
+        }
+
+        .navigation-buttons {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .navigation-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #d6b8e0;
+            color: white;
+            cursor: pointer;
+        }
+
+        .navigation-buttons button:disabled {
+            background-color: #888888;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Brews & Bites 
+            <p>Coffee Emporium</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="company.html" class="dropbtn">Company</a>
+                    <div class="dropdown-content">
+                         <a href="business.html">Business</a>
+                         <a href="menu.html">Menu</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="um.html">The University Of Manila</a></li>
+                <li><a href="cs.html">Computer Science</a></li>
+                <li><a href="os.html">OS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="article-section">
+       
+
+        <div class="article-content" id="section1">
+            <div class="article-details">
+                <h2>Our History</h2>
+                    <p>Founded in 2012, Brews & Bites Coffee Emporium began as a small neighborhood café with a passion for delivering high-quality coffee and a welcoming atmosphere. The brainchild of two lifelong friends, inspired by their travels to coffee-growing regions and a deep love for food, the emporium was designed to bring together both great coffee and delicious, freshly-made bites under one roof. They believed that coffee was not just a drink but an experience—one that should be shared with family, friends, and the local community. </p>
+                      <p>Starting with a single storefront, Brews & Bites quickly became known for its warm environment, where every cup of coffee is brewed to perfection, and every bite is crafted with care. The founders worked closely with local roasters to source ethically-grown beans from around the world, bringing in a wide variety of flavors, from the robust to the delicate. Each cup was served with a dedication to quality and consistency that has never wavered.</p>
+                    <p>What truly set Brews & Bites apart was its focus on community. The café was envisioned as a space where people could connect—whether it was over a quick morning brew, a relaxed weekend brunch, or a late-afternoon meeting with colleagues. It soon became a hub for local artists, musicians, and small businesses, regularly hosting events that celebrated creativity and craftsmanship.</p>
+                    <p>As the years passed, Brews & Bites grew, but its commitment to the local community remained unchanged. New locations were opened, each maintaining the same intimate and welcoming atmosphere of the original café. Alongside the expansion came new offerings, from artisanal baked goods and savory meals to seasonal specialties, which allowed customers to experience a variety of flavors throughout the year.</p>
+            </div>
+        </div>
+
+  <div class="article-content" id="section3" style="display: none;">
+            <div class="article-details">
+                <h2>Our Mision</h2>
+                <p>At Brews & Bites Coffee Emporium, our mission is to serve exceptional coffee and handcrafted bites in a welcoming atmosphere, fostering a sense of community and connection with every cup.</p>            </div>
+        </div>
+
+        <div class="article-content" id="section2" style="display: none;">
+            <div class="article-details">
+                <h2>Our Vision</h2>
+                To be a beloved gathering place where people come together over great coffee, food, and shared experiences, enriching local communities one cup at a time.</p>
+            </div>
+        </div>
+
+        
+    </article>
+
+
+<div class="navigation-buttons">
+    <button id="prevBtn" onclick="navigate(-1)" disabled>Previous</button>
+    <button id="nextBtn" onclick="navigate(1)">Next</button>
+</div>
+
+    <footer>
+        <p>&copy; 2024 Coffee Haven. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        let currentSection = 0;
+        const sections = document.querySelectorAll('.article-content');
+        
+        function navigate(direction) {
+            if (direction === 1 && currentSection < sections.length - 1) {
+                sections[currentSection].style.display = 'none';
+                currentSection++;
+                sections[currentSection].style.display = 'block';
+            } else if (direction === -1 && currentSection > 0) {
+                sections[currentSection].style.display = 'none';
+                currentSection--;
+                sections[currentSection].style.display = 'block';
+            }
+            updateButtons();
+        }
+
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentSection === 0;
+            document.getElementById('nextBtn').disabled = currentSection === sections.length - 1;
+        }
+
+        // Initialize the first section
+        sections.forEach((section, index) => {
+            if (index !== 0) section.style.display = 'none';
+        });
+        updateButtons();
+    </script>
+</body>
+</html>

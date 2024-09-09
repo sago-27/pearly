@@ -1,0 +1,178 @@
+/* Base styles for the body */
+body {
+    font-family: Century, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2e9;
+    color: #090909;
+}
+
+/* Style for the logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(7, 7, 7); /* Ensures logo is visible on the background image */
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    color: rgb(17, 16, 16);
+    text-decoration: none;
+}
+
+/* Menu section styles */
+.menu-section {
+    padding: 20px;
+    background-color: #f2f2e9;
+}
+
+.menu-section h1 {
+    text-align: center; /* Center the header text */
+    font-size: 24px; /* Adjust font size if needed */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+/* Style for section headers (Hot Coffees, Cold Coffees) */
+.hot-coffees h2,
+.cold-coffees h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px; /* Space below section headers */
+}
+
+/* Flex container for products */
+.business-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the products horizontally */
+    gap: 10px; /* Space between items */
+}
+
+/* Style for individual product items */
+.product-item {
+    flex: 1 1 calc(25% - 20px); /* 4 columns with space */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #eb8d96;
+    max-width: 220px; /* Adjust width for better alignment */
+    height: 400px; /* Increase height for better alignment with images */
+    text-align: center; /* Center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px; /* Add curved corners */
+    overflow: hidden; /* Ensure the image fits within the rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+/* Style for product images */
+.product-item img {
+    width: 100%; /* Make image width fill the container */
+    height: 200px; /* Set a fixed height for images */
+    object-fit: cover; /* Ensure images cover the container without distortion */
+    margin-bottom: 10px; /* Space below image */
+    border-radius: 15px; /* Curve the corners of the image */
+}
+
+/* Style for product details */
+.product-details {
+    text-align: center;
+}
+
+.product-details h2 {
+    font-size: 16px; /* Slightly smaller font size */
+    margin: 5px 0;
+}
+
+.product-details p {
+    font-size: 14px; /* Slightly smaller font size */
+    margin: 5px 0;
+}
+
+/* Style for product prices */
+.price {
+    font-weight: bold;
+    color: #090909;
+    display: block; /* Ensure price is on its own line */
+    margin-top: 5px; /* Space above the price */
+}
+
+/* Hover effect for product items */
+.product-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the frame */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for a 3D effect */
+}
+/* Style for Buy button */
+.buy-button {
+    background-color: #bb7953; /* Pastel gold background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add padding for size */
+    font-size: 16px; /* Font size for button text */
+    font-weight: bold; /* Bold text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.buy-button:hover {
+    background-color: #bb7953; /* Slightly darker pastel gold on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+/* Center-align headers in the pastries sections */
+.hot-pastries h2{
+    text-align: center;
+    margin-bottom: 20px; /* Add some space below the header */
+}
+
+/* Ensure the product items are aligned left within their containers */
+.hot-pastries .business-products {
+    text-align: left; /* Ensure text within product items is aligned left */
+}
+/* Style for the dropdown button */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
